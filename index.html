@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Hospital AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: white;
+        }
+        .glow {
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen max-w-md mx-auto px-4">
+        <!-- Header -->
+        <header class="py-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold">MediCare</div>
+                <div class="text-sm">News Section</div>
+                <div class="flex gap-4">
+                    <button class="text-sm">Contact</button>
+                    <button class="bg-gray-800 rounded-full p-2">
+                        <i class="bi bi-person-circle"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <div class="flex gap-4 mt-4">
+                <button class="text-sm">Features</button>
+                <button class="text-sm">Patient Analysis</button>
+                <button class="flex items-center gap-2">
+                    <i class="bi bi-search"></i>
+                    Search
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="mt-8">
+            <!-- Hero Section -->
+            <div class="bg-blue-900 rounded-lg p-6 glow">
+                <h1 class="text-2xl font-bold mb-2">StreamLine Your<br>Hospital Experience<br>With AI</h1>
+                <p class="text-sm mb-4">MedHelper is an intelligent hospital assistance system that empowers doctors and patients with smart symptom analysis, easy consultations, and secure medical record management.</p>
+                <button class="bg-white text-blue-900 px-6 py-2 rounded-md font-semibold hover:bg-blue-100 transition-colors">
+                    Get Started
+                </button>
+            </div>
+
+            <!-- Key Features -->
+            <section class="mt-8">
+                <h2 class="text-xl font-bold mb-4">Key Features</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full mb-3 flex items-center justify-center">
+                            <i class="bi bi-clipboard2-pulse text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Smart Symptom Analysis</h3>
+                        <p class="text-sm text-gray-400">Our AI engine analyzes patient symptoms.</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full mb-3 flex items-center justify-center">
+                            <i class="bi bi-shield-lock text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Secure Medical Records</h3>
+                        <p class="text-sm text-gray-400">Store and access patient records, prescriptions.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-gray-900 p-4 max-w-md mx-auto">
+            <div class="flex justify-between items-center">
+                <button class="flex flex-col items-center">
+                    <i class="bi bi-house text-xl"></i>
+                    <span class="text-xs">Home</span>
+                </button>
+                <button class="flex flex-col items-center">
+                    <i class="bi bi-heart-pulse text-xl"></i>
+                    <span class="text-xs">Vet</span>
+                </button>
+                <button class="flex flex-col items-center">
+                    <i class="bi bi-chat-dots text-xl"></i>
+                    <span class="text-xs">Chatbot</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        const searchButton = document.querySelector('button:has(.bi-search)');
+        searchButton.addEventListener('click', () => {
+            const searchQuery = prompt('Enter your search term:');
+            if (searchQuery) {
+                // Implement search functionality here
+                console.log('Searching for:', searchQuery);
+            }
+        });
+
+        // Get Started button functionality
+        const getStartedButton = document.querySelector('button.bg-white');
+        getStartedButton.addEventListener('click', () => {
+            alert('Welcome to MediCare! Please sign in or create an account to continue.');
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
